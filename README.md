@@ -1,26 +1,21 @@
-# [COVID-19 & Flu Hospitalization Dashboard](https://re-cover.vercel.app/)
+# Forecast Visualization Creator
 
 ## Overview
 
-This interactive dashboard provides a comprehensive overview of hospitalization rates due to COVID-19 and the flu across various regions. Utilizing the latest data, it offers insights into trends, predictions, and comparisons between different states and timeframes. Our goal is to present a clear and accessible platform for public health officials, researchers, and the general public to understand the impact of these illnesses and to aid in decision-making processes.
+This tool allows you to create time-series forecast visulization simply by editing a metadata file that describes the interface and data sources.
 
 ## Features
 
-- **Interactive Charts**: Explore hospitalization data through dynamic, interactive visualizations. Users can select specific states or regions to view trends over time.
+- **Interactive Charts**: Explore data through dynamic, interactive visualizations. Users can select specific regions to view trends over time.
 
-- **Predictive Analytics**: The dashboard incorporates predictive models to forecast future hospitalization rates, helping users anticipate potential outbreaks or declines.
+- **Predictive Analytics**: The dashboard allows visualization of predictions along with ground truth based on the data sources provided in the metadata file.
 
-- **Region Selection**: Users can select from a dropdown menu to filter data by specific states or regions, allowing for localized insights.
-
-- **Quantile Analysis**: For predictive data, the dashboard presents quantiles, including upper and lower bounds, to understand the potential range of outcomes.
+- **Quantile Analysis**: For predictions, the tool allows for visualization of quantiles, and upper and lower bounds.
 
 - **Responsive Design**: Optimized for both desktop and mobile devices, ensuring accessibility and ease of use regardless of how you access the dashboard.
 
-- **Multiplot** : Compare various regions hospitilization rates, by enabling multiplot
+- **Multiplot** : Compare trends of various regions by enabling multiplot
 
-## Data Sources
-
-The dashboard utilizes real-time data from reputable sources, including the CDC, and various public health departments. 
 
 ## Getting Started
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
