@@ -1,53 +1,63 @@
-@forecast{
-    target = cases
-    url = "https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/forecasts/us_data.csv"
-    data_type = ground_truth
-    data_period = weekly
-    data_level = state_level
-    measure = MAE
+
+{
+    target = cov_hospitalizations
+    url = "https://raw.githubusercontent.com/smdp2000/data_dump/main/truth11-01.csv"
+    data_type = truth
+    data_freq = "inc"
+    incident = 1
+    cumulative = 0
+    title = "Covid Hospitalizations"
+    xtitle = "Date"
+    ytitle = "Hospitalizations"
 }
 
-@forecast{
-    target = cases
-    url_quantile = "https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/forecasts/us_forecasts_current_0.csv"
-    prediction_period = 1 week ahead
+
+{
+    target = cov_hospitalizations
+    quantile = 1
+    url_upper = "https://raw.githubusercontent.com/smdp2000/data_dump/main/2024-01-08-SGroup-RandomForest_0.975.csv"
 }
 
-@forecast{
-    target = cases
-    url_upper = "https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/forecasts/us_forecasts_current_0_ub.csv"
-    prediction_period = 1 week ahead
+{
+    target = cov_hospitalizations
+    quantile = 0
+    url_lower = "https://raw.githubusercontent.com/smdp2000/data_dump/main/2024-01-08-SGroup-RandomForest_0.025.csv"
 }
 
-@forecast{
-    target = cases
-    url_lower = "https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/forecasts/us_forecasts_current_0_lb.csv"
-    prediction_period = 1 week ahead
+{
+    target = cov_hospitalizations
+    quantile = 0.5
+    url_quantile = "https://raw.githubusercontent.com/smdp2000/data_dump/main/2024-01-15-SGroup-RandomForest_0.5.csv"
 }
 
-@forecast{
-    url = "https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/forecasts/us_deaths.csv"
-    target = deaths
-    data_type = ground_truth
-    data_period = weekly
-    data_level = state_level
-    measure = MAE
+
+{
+    target = flu_hospitalizations
+    url = "https://raw.githubusercontent.com/smdp2000/data_dump/main/truth11-01flu.csv"
+    data_type = truth
+    data_freq = "cum"
+    incident = 1
+    cumulative = 1
+    title = "Flu Hospitalizations"
+    xtitle = "Date"
+    ytitle = "Hospitalizations"
 }
 
-@forecast{
-    target = deaths
-    url_quantile = "https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/forecasts/us_deaths_current_0.csv"
-    prediction_period = 1 week ahead
+
+{
+    target = flu_hospitalizations
+    quantile = 1
+    url = "https://raw.githubusercontent.com/smdp2000/data_dump/main/2024-01-13-SGroup-RandomForest_0.975flu.csv"
 }
 
-@forecast{
-    target = deaths
-    url_upper = "https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/forecasts/us_deaths_current_0_ub.csv"
-    prediction_period = 1 week ahead
+{
+    target = flu_hospitalizations
+    quantile = 0.025
+    url_lower = "https://raw.githubusercontent.com/smdp2000/data_dump/main/2024-01-13-SGroup-RandomForest_0.025flu.csv"
 }
 
-@forecast{
-    target = deaths
-    url_lower = "https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/forecasts/us_deaths_current_0_lb.csv"
-    prediction_period = 1 week ahead
+{
+    target = flu_hospitalizations
+    quantile = 0.5
+    url_quantile = "https://raw.githubusercontent.com/smdp2000/data_dump/main/2024-01-13-SGroup-RandomForest_0.5flu.csv"
 }
