@@ -6,7 +6,7 @@
     data_freq = "inc"
     incident = 1
     cumulative = 0
-    title = "Covid Hospitalizations"
+    title = "COVID-19 Hospitalizations"
     xtitle = "Date"
     ytitle = "Hospitalizations"
 }
