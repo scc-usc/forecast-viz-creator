@@ -3,9 +3,9 @@
     target = "COVID-19 hospitalizations"
     url = "https://raw.githubusercontent.com/smdp2000/data_dump/main/truth11-01.csv"
     data_type = truth
-    data_freq = "inc"
+    data_freq = "cum"
     incident = 1
-    cumulative = 0
+    cumulative = 1
     title = "COVID-19 Hospitalizations"
     xtitle = "Date"
     ytitle = "Hospitalizations"
